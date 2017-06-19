@@ -1,0 +1,238 @@
+
+body {
+    background: #4FC3F7;
+    display: block;
+    position: relative;
+}
+
+.play {
+    background: #060606;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Press Start 2P', arial;
+    line-height: 2;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+audio {
+    background: #060606;
+    display: inline-block;
+    padding-left: 10px;
+    width: 70px;
+}
+
+.head-base {
+    border-radius: 100%;
+    height: 480px;
+    margin: 0 auto;
+    position: relative;
+    top: 125px;
+    width: 420px;
+}
+
+.head-eyes-left {
+    -moz-transition: all 5s;
+    -webkit-transition: all 5s;
+    background: rgba(255, 255, 255, 0.71);
+    border-radius: 55px 35px 15px 25px;
+    display: inline-block;
+    height: 105px;
+    left: 35px;
+    position: relative;
+    top: 30px;
+    transition: all 5s;
+    width: 100px;
+}
+
+.head-eyes-right {
+    -moz-transition: all 5s;
+    -webkit-transition: all 5s;
+    background: rgba(255, 255, 255, 0.71);
+    border-radius: 35px 55px 15px 24px;
+    display: inline-block;
+    height: 105px;
+    left: 35px;
+    position: relative;
+    top: 30px;
+    transition: all 5s;
+    width: 100px;
+}
+
+.head-helmet {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+}
+
+.helmet-shell {
+    background: rgb(22, 71, 150);
+    border-radius: 60% 60% 50% 50% / 50% 50% 70% 70%;
+    height: 495px;
+    margin: 0 auto;
+    position: relative;
+    width: 445px;
+}
+
+.shell-view--left {
+    -moz-transform: skew(16deg);
+    -o-transform: skew(16deg);
+    -webkit-transform: skew(16deg);
+    background: rgb(226, 192, 155);
+    border-radius: 115px 95px 17px 135px;
+    display: inline-block;
+    height: 100px;
+    height: 260px;
+    left: 65px;
+    position: relative;
+    top: 250px;
+    width: 160px;
+    z-index: 1;
+}
+
+.shell-view--right {
+    -moz-transform: skew(-16deg);
+    -o-transform: skew(-16deg);
+    -webkit-transform: skew(-16deg);
+    background: rgb(226, 192, 155);
+    border-radius: 115px 95px 135px 17px;
+    display: inline-block;
+    height: 100px;
+    height: 260px;
+    left: 55px;
+    position: relative;
+    top: 250px;
+    width: 160px;
+}
+
+.hearing-left {
+    border-bottom: 43px solid rgb(137, 168, 193);
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    display: inline-block;
+    height: 0px;
+    left: -80px;
+    position: relative;
+    top: 54px;
+    transform: rotate(253deg);
+    width: 100px;
+}
+
+.hearing-right {
+    border-bottom: 43px solid rgb(137, 168, 193);
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    display: inline-block;
+    height: 0px;
+    left: 160px;
+    position: relative;
+    top: 54px;
+    transform: rotate(107deg);
+    width: 100px;
+}
+
+.protec-top {
+    background: rgb(137, 168, 193);
+    border-radius: 0 0px 15px 15px;
+    display: inline-block;
+    height: 70px;
+    left: 155px;
+    margin: 0 auto;
+    position: relative;
+    top: -280px;
+    width: 130px;
+}
+
+.protec-top:before {
+    border-bottom: 50px solid rgb(137, 168, 193);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    content: "";
+    display: inline-block;
+    height: 80px;
+    position: relative;
+    top: -130px;
+    width: 70px;
+}
+
+.light-power {
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    background: rgb(137, 168, 193);
+    border-radius: 50% 50% 50% 50%/ 15% 15% 17% 17%;
+    box-shadow: none;
+    display: inline-block;
+    height: 130px;
+    left: 20px;
+    position: relative;
+    top: -180px;
+    transition: all 0.5s;
+    width: 130px;
+}
+
+body:active {
+    background: url('../img/bg5.jpg') no-repeat top center/100%;
+}
+
+body:active .helmet-shell {
+    background: rgb(1, 7, 17);
+}
+
+body:active .hearing-right,
+body:active .hearing-left,
+body:active .protec-top:before {
+    border-bottom-color: rgb(38, 46, 52);
+}
+
+body:active .protec-top {
+    background-color: rgb(38, 46, 52);
+}
+
+body:active .shell-view--right,
+body:active .shell-view--left {
+    background: rgb(16, 20, 22);
+}
+
+body:active .light-power {
+    -moz-animation: charge 2s ease-in-out infinite alternate;
+    -webkit-animation: charge 2s ease-in-out infinite alternate;
+    animation: charge 2s ease-in-out infinite alternate;
+    background: rgb(237, 247, 255);
+}
+
+body:active .head-eyes-left,
+body:active .head-eyes-right {
+    -moz-animation: charge 5s ease-in-out infinite alternate;
+    -webkit-animation: charge 5s ease-in-out infinite alternate;
+    animation: charge 5s ease-in-out infinite alternate;
+    background: rgb(237, 247, 255);
+}
+
+@-webkit-keyframes charge {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
+@-moz-keyframes charge {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
+@keyframes charge {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
