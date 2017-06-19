@@ -173,7 +173,7 @@ audio {
 }
 
 body:active {
-    background: url('../img/bg5.jpg') no-repeat top center/100%;
+    background: #000 url('../img/bg5.jpg') no-repeat top center/100% 100%;
 }
 
 body:active .helmet-shell {
