@@ -101,7 +101,7 @@ audio {
     display: inline-block;
     height: 100px;
     height: 260px;
-    left: 55px;
+    left: 65px;
     position: relative;
     top: 250px;
     width: 160px;
@@ -138,7 +138,7 @@ audio {
     border-radius: 0 0px 15px 15px;
     display: inline-block;
     height: 70px;
-    left: 155px;
+    left: 165px;
     margin: 0 auto;
     position: relative;
     top: -280px;
@@ -158,17 +158,14 @@ audio {
 }
 
 .light-power {
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
     background: rgb(137, 168, 193);
     border-radius: 50% 50% 50% 50%/ 15% 15% 17% 17%;
     box-shadow: none;
     display: inline-block;
     height: 130px;
-    left: 20px;
+    left: 30px;
     position: relative;
     top: -180px;
-    transition: all 0.5s;
     width: 130px;
 }
 
@@ -196,19 +193,48 @@ body:active .shell-view--left {
 }
 
 body:active .light-power {
-    -moz-animation: charge 2s ease-in-out infinite alternate;
-    -webkit-animation: charge 2s ease-in-out infinite alternate;
-    animation: charge 2s ease-in-out infinite alternate;
-    background: rgb(237, 247, 255);
+    background-color: rgb(38, 46, 52);
 }
 
 body:active .head-eyes-left,
 body:active .head-eyes-right {
-    -moz-animation: charge 5s ease-in-out infinite alternate;
-    -webkit-animation: charge 5s ease-in-out infinite alternate;
-    animation: charge 5s ease-in-out infinite alternate;
+    -moz-animation: charge-light 5s ease-in-out infinite alternate;
+    -webkit-animation: charge-light 5s ease-in-out infinite alternate;
+    animation: charge-light 5s ease-in-out infinite alternate;
     background: rgb(237, 247, 255);
 }
+
+@-webkit-keyframes charge-light {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff2222, 0 0 70px #ff2222, 0 0 80px #ff2222, 0 0 100px #ff2222, 0 0 150px #ff2222;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2222, 0 0 35px #ff2222, 0 0 40px #ff2222, 0 0 50px #ff2222, 0 0 75px #ff2222;
+    }
+}
+
+@-moz-keyframes charge-light {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff2222, 0 0 70px #ff2222, 0 0 80px #ff2222, 0 0 100px #ff2222, 0 0 150px #ff2222;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2222, 0 0 35px #ff2222, 0 0 40px #ff2222, 0 0 50px #ff2222, 0 0 75px #ff2222;
+    }
+}
+
+@keyframes charge-light {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff2222, 0 0 70px #ff2222, 0 0 80px #ff2222, 0 0 100px #ff2222, 0 0 150px #ff2222;
+    }
+    to {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2222, 0 0 35px #ff2222, 0 0 40px #ff2222, 0 0 50px #ff2222, 0 0 75px #ff2222;
+    }
+}
+
+
+
+//
+
 
 @-webkit-keyframes charge {
     from {
